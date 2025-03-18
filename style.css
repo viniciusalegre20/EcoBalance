@@ -23,7 +23,6 @@
     background-attachment: fixed; /* Faz a imagem ficar fixa enquanto o conteúdo se move */
     background: linear-gradient(rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.13)),
               url('imgs/florestona.jpeg');
-    background-size: 200%;
     padding-bottom: 40px;
 }
 
