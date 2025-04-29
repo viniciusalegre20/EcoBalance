@@ -1,0 +1,152 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilização do footer */
+.footer {
+    background-color: #5b774a; /* Cor de fundo */
+    color: white;
+    padding: 30px 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Conteúdo centralizado */
+.footer-content {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+/* Estilizando a logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 70%;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.logo img {
+    width: 200px;
+}
+
+/* Linha divisória */
+.divider {
+    border: 1px solid white;
+    width: 90%;
+    margin: 15px auto;
+}
+
+/* Blocos de links */
+.footer-blocos {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.bloco {
+    text-align: left;
+}
+
+.bloco h4 {
+    font-size: 10px;
+    font-weight: bold;
+    color: #ddd;
+    margin-bottom: 10px;
+}
+
+.bloco a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.bloco a:hover {
+    text-decoration: none;
+}
+
+/* Parte inferior do footer */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    margin-top: 10px;
+    padding: 0 20px;
+}
+
+.footer-direitos{
+    display: flex;
+    justify-content: end;
+    font-size: 12px;
+    margin-top: 10px;
+    padding: 0 20px; 
+}
+
+/* Botão de idioma */
+.language-btn {
+    display: flex;
+    align-items: center;
+    background: white;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    gap: 10px;
+}
+
+.language-btn img {
+    width: 20px;
+}
+
+/* Ícones sociais */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+.cudecachorro{
+    justify-items: end;
+}
+.social-icons img {
+    width: 25px;
+    height: 25px;
+}
+
+/* Texto inferior */
+.footer-bottom p {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Responsividade para iPhone XR */
+@media (max-width: 414px) {
+    .footer-blocos {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .language-btn {
+        margin: auto;
+    }
+}
+
+.button-link{
+    text-decoration: none;
+}

@@ -9,13 +9,188 @@
     font-optical-sizing: auto;
     font-style: normal;
 
-  }
-.cabecalho{
-    background-color: white;
-    height: 130px;
-    font-size: 30px;
-    padding: 0px;
 }
+@media (max-width: 430px ) {
+    .cabecalho{
+        background-color: white;
+        height: 130px;
+        font-size: 30px;
+        padding: 0px;
+    }
+    .corpo{
+        padding-top: 70px;
+        background-size: contain;
+        background-position: initial;
+        background-attachment: fixed; /* Faz a imagem ficar fixa enquanto o conteúdo se move */
+        background: linear-gradient(rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.13)),
+                  url('imgs/florestona.jpeg');
+        padding-bottom: 40px;
+    }
+    
+    .card{
+        background-color:rgba(255, 255, 255, 0.71)
+    }
+    h1{
+        color: white;
+        padding-top: 60px;
+        font-size: 30px;
+        font-family: "Roboto", serif;
+    }
+    h3{
+        color: white;
+        text-align: center;
+        font-family: "Roboto", serif;
+    }
+    .corpo button{
+        height: 75px;
+        width: 310px;
+        border: 1px solid rgba(70, 122, 62, 0.83);
+        border-radius: 15px;
+        background-color: rgba(70, 122, 62, 0.83);
+        color: white;
+        font-size: 25px;
+        font-family: "Roboto", serif;
+    }
+    .corpo button:hover{
+        background-color: rgb(70, 122, 62);
+        font-size: 25px;
+        font-family: "Roboto", serif;
+    }
+    .pilars{
+        color: rgb(70, 122, 62);
+        padding-top: 10px;
+    }
+    .pilares{
+        margin: 0px;
+        padding: 0px;
+    }
+    .pilares h3{
+        color: green;
+        padding-top: 15px;
+        font-size: 15px;
+    }
+    .circulo {
+        width: 7rem;
+        height: 7rem;
+        border-radius: 50%;
+        border: 0.2rem solid white;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+      }
+    .fotos{
+        padding: 0;
+    }
+    .foto img{
+        width: 20px;
+    }
+    .feedback{
+        background-color: rgba(42, 97, 37, 0.65);
+        padding: 10px 0px 10px 0px;
+    }
+    
+    .feedback img{
+        width: 10rem;
+    }
+    .star-rating span {
+        color: gold;
+        font-size: 1.2em;
+      }
+      .computer{
+        display: none;
+    }
+}
+
+@media ( min-width: 431px)  and (max-width: 772px){
+    .fotogrande {
+        display: none;
+    }
+    .computer{
+        display: none;
+    }
+    .cabecalho{
+        background-color: white;
+        height: 130px;
+        font-size: 30px;
+        padding: 0px;
+    }
+    .corpo{
+        padding-top: 70px;
+        background-size: contain;
+        background-position: initial;
+        background-attachment: fixed; /* Faz a imagem ficar fixa enquanto o conteúdo se move */
+        background: linear-gradient(rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.13)),
+                  url('imgs/florestona.jpeg');
+        padding-bottom: 40px;
+    }
+    
+    .card{
+        background-color:rgba(255, 255, 255, 0.71)
+    }
+    h1{
+        color: white;
+        padding-top: 60px;
+        font-size: 30px;
+        font-family: "Roboto", serif;
+    }
+    h3{
+        color: white;
+        text-align: center;
+        font-family: "Roboto", serif;
+    }
+    .corpo button{
+        height: 75px;
+        width: 310px;
+        border: 1px solid rgba(70, 122, 62, 0.83);
+        border-radius: 15px;
+        background-color: rgba(70, 122, 62, 0.83);
+        color: white;
+        font-size: 25px;
+        font-family: "Roboto", serif;
+    }
+    .corpo button:hover{
+        background-color: rgb(70, 122, 62);
+        font-size: 25px;
+        font-family: "Roboto", serif;
+    }
+    .pilars{
+        color: rgb(70, 122, 62);
+        padding-top: 10px;
+    }
+    .pilares{
+        margin: 0px;
+        padding: 0px;
+    }
+    .pilares h3{
+        color: green;
+        padding-top: 15px;
+        font-size: 20px
+    }
+    .circulo {
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+        border: 0.2rem solid white;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+      }
+    .fotos{
+        padding: 0;
+    }
+    .foto img{
+        width: 20px;
+    }
+    .feedback{
+        background-color: rgba(42, 97, 37, 0.65);
+        padding: 10px 0px 10px 0px;
+    }
+    
+    .feedback img{
+        width: 10rem;
+    }
+    .star-rating span {
+        color: gold;
+        font-size: 1.2em;
+      }
+}
+@media (min-width: 773px){
 .corpo{
     padding-top: 70px;
     background-size: contain;
@@ -65,12 +240,12 @@ h3{
 }
 .pilares h3{
     color: green;
-    padding-top: 15px;
-    font-size: 0.75rem;
+    padding-top: 25px;
+    font-size: 25px;
 }
 .circulo {
-    width: 6rem;
-    height: 6rem;
+    width: 15rem;
+    height: 15rem;
     border-radius: 50%;
     border: 0.2rem solid white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
@@ -83,22 +258,22 @@ h3{
 }
 .feedback{
     background-color: rgba(42, 97, 37, 0.65);
-    padding: 10px 0px 10px 0px;
+    padding: 10px 250px 10px 0px;
 }
-
 .feedback img{
-    width: 10rem;
+    width: 80px;
 }
 .star-rating span {
     color: gold;
     font-size: 1.2em;
   }
-@media (max-width: 992px) {
-    .fotogrande {
-        display: none;
-    }
+  .mobile{
+    display: none;
 }
-
-@media (max-width: 768px) {
-
+.computer{
+    display: block;
+    background-color: white;
+    font-size: 30px;;
+    padding: 0px;
+}
 }
