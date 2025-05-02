@@ -17,6 +17,12 @@
         font-size: 30px;
         padding: 0px;
     }
+    .encontre{
+        margin-top: 40px;
+        background-color: rgba(255, 255, 255, 0.856);
+        border: 1px solid rgba(255, 255, 255, 0.856);
+        border-radius: 15px; 
+    }
     .corpo{
         padding-top: 70px;
         background-size: contain;
@@ -105,6 +111,12 @@
 @media ( min-width: 431px)  and (max-width: 772px){
     .fotogrande {
         display: none;
+    }
+    .encontre{
+        margin-top: 40px;
+        background-color: rgba(255, 255, 255, 0.856);
+        border: 1px solid rgba(255, 255, 255, 0.856);
+        border-radius: 15px; 
     }
     .computer{
         display: none;
@@ -203,7 +215,12 @@
               url('imgs/florestona.jpeg');
     padding-bottom: 40px;
 }
-
+.encontre{
+    margin-top: 40px;
+    background-color: rgba(255, 255, 255, 0.856);
+    border: 1px solid rgba(255, 255, 255, 0.856);
+    border-radius: 15px; 
+}
 .card{
     background-color:rgba(255, 255, 255, 0.71);
 }
@@ -215,7 +232,6 @@ h1{
 }
 h3{
     color: white;
-    text-align: center;
     font-family: "Roboto", serif;
 }
 .corpo button{
@@ -279,4 +295,7 @@ h3{
     font-size: 30px;
     padding: 0px;
 }
+}
+a{
+    color: green;
 }
