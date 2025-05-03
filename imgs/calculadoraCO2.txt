@@ -1,0 +1,112 @@
+<div class="container mt-5">
+        <form action="" class="mb-5">
+            <!-- Consumo de Eletricidade -->
+            <div class="pt-3 row forms">
+                <label for="">Consumo de eletricidade</label>
+                <p class="minitext">Insira seu consumo mensal de eletricidade, ou o valor da sua conta. <br> Veja onde encontrar essa informação na sua conta de energia elétrica</p>
+                <div class="mb-3">
+                    <label for="selection-eletric" class="form-label">Selecione a métrica</label>
+                    <select class="form-select" id="selection-eletric" aria-label="Selecione a métrica de energia">
+                        <option selected>Selecione uma opção</option>
+                        <option value="1">R$/mês</option>
+                        <option value="2">kWh/mês</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <input type="number" class="form-control" id="valor-eletricidade" placeholder="Digite o valor/consumo de energia">
+                </div>  
+            </div>
+
+            <!-- Consumo de Gás -->
+            <div class="pt-3 mt-3 row forms">
+                <label for="">Consumo de gás - cozinha</label>
+                <p class="minitext">Insira seu consumo mensal de gás de cozinha, ou o valor da sua conta.</p>
+                <div class="mb-3">
+                    <label for="selection-gas" class="form-label">Selecione a métrica</label>
+                    <select class="form-select" id="selection-gas" aria-label="Selecione a métrica de gás">
+                        <option selected>Selecione uma opção</option>
+                        <option value="1">R$/mês</option>
+                        <option value="2">m³/mês</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <input type="number" class="form-control" id="valor-gas" placeholder="Digite o valor/consumo de gás de cozinha">
+                </div>  
+            </div>
+
+            <!-- Transporte Individual -->
+            <div class="pt-3 mt-3 row forms">
+                <label for="">Transporte individual</label>
+                <p class="minitext">Neste item, você preencherá as informações relacionadas ao seu transporte individual, no seu dia a dia.</p>
+                <div class="mb-3">
+                    <label for="selection-transport" class="form-label">Selecione o meio de transporte</label>
+                    <select class="form-select" id="selection-transport" aria-label="Selecione o meio de transporte">
+                        <option selected>Selecione uma opção</option>
+                        <option value="1">Carro</option>
+                        <option value="2">Moto</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="selection-combustivel" class="form-label">Selecione o tipo de combustível</label>
+                    <select class="form-select" id="selection-combustivel" aria-label="Selecione o tipo de combustível">
+                        <option selected>Selecione uma opção</option>
+                        <option value="1">Gasolina</option>
+                        <option value="2">Etanol</option>
+                        <option value="3">Diesel</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <input type="number" class="form-control" id="km-transporte" placeholder="Digite a kilometragem média mensal">
+                </div>  
+            </div>
+
+            <button type="button" class="btn btn-primary" onclick="calcularEmissoes()">Calcular Emissões</button>
+        </form>
+
+        <div id="resultado"></div>
+    </div>
+
+
+<script>
+        function calcularEmissoes() {
+            const valorEletricidade = parseFloat(document.getElementById('valor-eletricidade').value);
+            const valorGas = parseFloat(document.getElementById('valor-gas').value);
+            const kmTransporte = parseFloat(document.getElementById('km-transporte').value);
+            const combustivel = document.getElementById('selection-combustivel').value;
+            const transporte = document.getElementById('selection-transport').value;
+
+            // Fatores de emissão de CO2
+            const fatoresEmissao = {
+                gasolina: 2.3, // kg CO2 por litro
+                etanol: 0.82,
+                diesel: 2.6
+            };
+
+            let resultado = "Resultados de Emissões de CO₂: <br><br>";
+
+            // Cálculo para transporte
+            if (transporte === "1" && combustivel !== "0" && kmTransporte > 0) {
+                let fatorCombustivel;
+                if (combustivel === "1") fatorCombustivel = fatoresEmissao.gasolina;
+                else if (combustivel === "2") fatorCombustivel = fatoresEmissao.etanol;
+                else if (combustivel === "3") fatorCombustivel = fatoresEmissao.diesel;
+
+                const emissaoTransporte = kmTransporte * fatorCombustivel;
+                resultado += `Transporte (Carro/Moto) - Emissão de CO₂: ${emissaoTransporte.toFixed(2)} kg <br><br>`;
+            }
+
+            // Cálculo de eletricidade (assumindo 0.00051 kg CO₂ por kWh)
+            if (valorEletricidade > 0) {
+                const emissaoEletricidade = valorEletricidade * 0.00051; // fator de emissão para kWh
+                resultado += `Eletricidade - Emissão de CO₂: ${emissaoEletricidade.toFixed(2)} kg <br><br>`;
+            }
+
+            // Cálculo de gás (assumindo 2.3 kg CO₂ por m³)
+            if (valorGas > 0) {
+                const emissaoGas = valorGas * 2.3;
+                resultado += `Gás de Cozinha - Emissão de CO₂: ${emissaoGas.toFixed(2)} kg <br><br>`;
+            }
+
+            document.getElementById('resultado').innerHTML = resultado;
+        }
+    </script>

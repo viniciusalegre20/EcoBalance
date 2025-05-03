@@ -8,8 +8,52 @@
     font-family: "Josefin Sans", serif;
     font-optical-sizing: auto;
     font-style: normal;
-
 }
+.minitext{
+    font-size: 10px;
+    color: rgb(255, 255, 255);
+    padding-top: 5px;
+}
+.resultados{
+    padding-top: 20px;
+    border-radius: 15px;
+    background-color: rgba(42, 97, 37, 0.65);
+    margin-bottom: 20px;
+}
+.corpocalc{
+    padding-top: 70px;
+    background-size: contain;
+    background-position: center;
+    background-attachment: fixed; /* Faz a imagem ficar fixa enquanto o conteúdo se move */
+    background: linear-gradient(rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.13)),
+              url('imgs/mata-atlantica.jpg');
+    padding-bottom: 40px;
+}
+.forms{
+    background-color: rgba(70, 122, 62, 0.83);
+    border-radius: 15px;
+}
+    #chat-link {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 60px;
+        height: 60px;
+        background-color: #00792e;
+        color: white;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 60px;
+        font-size: 28px;
+        text-decoration: none;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        z-index: 1000;
+      }
+  
+      #chat-link:hover {
+        background-color: #00a740;
+      }
+
 @media (max-width: 431px ) {
     .cabecalho{
         background-color: white;
@@ -180,8 +224,8 @@
         font-size: 20px
     }
     .circulo {
-        width: 10rem;
-        height: 10rem;
+        width: 7rem;
+        height: 7rem;
         border-radius: 50%;
         border: 0.2rem solid white;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
@@ -198,7 +242,7 @@
     }
     
     .feedback img{
-        width: 10rem;
+        width: 4rem;
     }
     .star-rating span {
         color: gold;
